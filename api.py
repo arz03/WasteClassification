@@ -1,5 +1,6 @@
 from fastapi import FastAPI, File, UploadFile, HTTPException
 from fastapi.responses import JSONResponse
+from fastapi.middleware.cors import CORSMiddleware
 import torch
 import torch.nn as nn
 import timm
@@ -11,6 +12,15 @@ from typing import List, Dict
 import uvicorn
 
 app = FastAPI(title="Waste Classification API", description="API for classifying waste into 4 categories")
+
+# Add CORS middleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Allows all origins
+    allow_credentials=True,
+    allow_methods=["*"],  # Allows all methods
+    allow_headers=["*"],  # Allows all headers
+)
 
 # Define the WasteClassifier model (same as in app.py)
 class WasteClassifier(nn.Module):
