@@ -1,0 +1,45 @@
+# WasteClassification
+
+Image classification model for waste segregation using PyTorch. This fine-tuned EfficientNet 2b model classifies images into four categories: metal, paper, glass, and plastic.
+
+- **Framework:** PyTorch  
+- **Model:** EfficientNet 2b (fine-tuned)  
+- **Classes:** metal, paper, glass, plastic  
+- **Accuracy:** 94% on training data  
+- **Dataset:** Imbalanced dataset handled by manually adjusting class weights  
+- **API:** FastAPI integration for easy model serving
+
+## Quick Start
+
+### 1. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 2. Run the API Server
+
+```bash
+python api.py
+```
+
+The server will start on `http://127.0.0.1:8000/`.
+
+### 3. Example API Usage
+
+Send an image for classification using `requests`:
+
+```python
+import requests
+
+url = "http://127.0.0.1:8000/predict"
+files = {'file': open('example.jpg', 'rb')}
+response = requests.post(url, files=files)
+print(response.json())  # {'class': 'plastic'}
+```
+
+Alternatively, you can use `test_api.py` to test the API:
+
+```bash
+python test_api.py
+```
