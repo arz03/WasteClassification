@@ -23,7 +23,7 @@ pip install -r requirements.txt
 python api.py
 ```
 
-The server will start on `http://127.0.0.1:8000/`.
+The server will start on `http://127.0.0.1:5001/`.
 
 ### 3. Example API Usage
 
