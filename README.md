@@ -13,17 +13,13 @@ Image classification model for waste segregation using PyTorch. This fine-tuned 
 
 ### 1. Install Dependencies
 
-# --------------------------------------------
-# ⚠️ PyTorch must be installed manually with CUDA support:
-# Run this before installing the rest:
-# pip install torch==2.6.0 torchvision==0.21.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cu126
-#
-# Do NOT uncomment the lines below – they're just for reference.
-# torch==2.6.0+cu126
-# torchaudio==2.6.0+cu126
-# torchvision==0.21.0+cu126
-# --------------------------------------------
+PyTorch must be installed manually with CUDA support.
 
+Run this before installing the rest:
+```bash
+pip install torch==2.6.0 torchvision==0.21.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cu126
+```
+Then install dependencies using:
 ```bash
 pip install -r requirements.txt
 ```
