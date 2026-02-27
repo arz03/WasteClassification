@@ -8,7 +8,7 @@ Image classification model for waste segregation using PyTorch. This fine-tuned 
 - **Framework:** PyTorch  
 - **Model:** EfficientNet 2b (fine-tuned)  
 - **Classes:** metal, paper, glass, plastic  
-- **Accuracy:** 94% on training data  
+- **Accuracy:** 94% on testing dataset  
 - **Dataset:** Imbalanced dataset handled by manually adjusting class weights  
 - **API:** FastAPI integration for easy model serving
 
