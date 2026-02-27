@@ -1,5 +1,8 @@
 # WasteClassification
 
+Demo: [Watch the Waste Classification Demo](https://youtu.be/uPA32XmENts)
+
+
 Image classification model for waste segregation using PyTorch. This fine-tuned EfficientNet 2b model classifies images into four categories: metal, paper, glass, and plastic.
 
 - **Framework:** PyTorch  
